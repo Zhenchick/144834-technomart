@@ -1,7 +1,11 @@
 ﻿# Личный проект «Техномарт»
 
 * Студент: [Евгения Соколова](https://up.htmlacademy.ru/htmlcss/14/user/144834).
+<<<<<<< HEAD
 * Наставник: [Игорь Беликов](https://htmlacademy.ru/profile/id201027).
+=======
+* Наставник: [Игорь Беликов] (https://htmlacademy.ru/profile/id201027).
+>>>>>>> origin/patch-1
 
 ---
 

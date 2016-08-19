@@ -1,0 +1,68 @@
+body {
+  font-family: "Cuprum", "PTSans";
+  font-size: 16px;
+  line-height: auto;
+}
+.promo-item h2 {
+  font-size: 24px;
+  font-family: "Cuprum";
+  font-weight: bold;
+  line-height: 30px;
+  color: ffffff;
+}
+.subtitle h2 {
+  font-size: 36px;
+  font-family: "Cuprum";
+  font-weight: bold;
+  line-height: 30px;
+  color: ffffff;
+}
+.headline h2 {
+  font-size: 30px;
+  font-family: "Cuprum";
+  font-weight: normal;
+  line-height: 30px;
+  color: 32425c;
+}
+.service h2 {
+  font-size: 30px;
+  font-family: "Cuprum Regular", "PTSans Regular";
+  line-height: 24px;
+  color: 000000;
+  font-weight: normal;
+}
+.slider-item h2 {
+  font-size: 36px;
+  font-family: "Cuprum Regular", "PTSans Regular";
+  line-height: 24px;
+  color: 32425c;
+  font-weight: normal;
+}
+.information h2 {
+  font-size: 30px;
+  font-family: "Cuprum Regular", "PTSans Regular";
+  line-height: auto;
+  color: 000000;
+  font-weight: normal;
+}
+.headline h1 {
+  font-size: 30px;
+  font-family: "Cuprum";
+  font-weight: normal;
+  line-height: 30px;
+  color: 32425c;
+}
+.catalog h2 {
+  font-size: 13px;
+  font-family: "PTSans";
+  font-weight: normal;
+  line-height: 18px;
+  color: 000000;
+}
+.about h1 {
+  font-size: 30px;
+  font-family: "Cuprum Regular", "PTSans Regular";
+  line-height: 24px;
+  color: 000000;
+  font-weight: normal;
+}

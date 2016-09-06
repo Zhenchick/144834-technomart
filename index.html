@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic">
      <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet" type="text/css">
@@ -122,14 +123,14 @@
         <h2>Скидки 50%</h2>
         <a class="btn item-discount" href="#">На 350 товаров</a>
         </div>
-        <img class="image-promo image-promo-basket"src="img/basket.png" alt="Скидки" />
+        <img class="image-promo image-promo-basket" src="img/basket.png" alt="Скидки" />
       </div>
       <div class="promo-item item-delivery">
         <div class="promo-item-text">
         <h2>Доставка</h2>
         <a class="btn item-delivery" href="#">Бесплатно</a>
         </div>
-        <img class="image-promo image-promo-bus"src="img/bus.png" alt="Доставка" />
+        <img class="image-promo image-promo-bus" src="img/bus.png" alt="Доставка" />
       </div>
     </section>
     <section class="popular-product">
@@ -148,7 +149,7 @@
         </div>
         <a href="#" class="title">Перфоратор BOSCH BFG 9000</a>
         <div class="old-price">22 500 р.</div>
-        <div class="price" href="#">15 500 р.</div>
+        <div class="price">15 500 р.</div>
         </div>
 
         <div class="product-item ">
@@ -161,7 +162,7 @@
           </div>
           <a href="#" class="title">Перфоратор <span class="model">BOSCH BFG 3000</span></a>
           <div class="old-price">22 500 р.</div>
-          <div class="price" href="#">15 500 р.</div>
+          <div class="price">15 500 р.</div>
         </div>
 
         <div class="product-item ">
@@ -174,7 +175,7 @@
           </div>
           <a href="#" class="title">Перфоратор <span class="model">BOSCH BFG 6000</span></a>
           <div class="old-price">30 500 р.</div>
-          <div class="price" href="#">25 500 р.</div>
+          <div class="price">25 500 р.</div>
         </div>
 
         <div class="product-item new">
@@ -187,7 +188,7 @@
           </div>
           <a href="#" class="title">Перфоратор <span class="model">BOSCH BFG 2000</span></a>
           <div class="old-price"></div>
-          <div class="price" href="#">12 500 р.</div>
+          <div class="price">12 500 р.</div>
         </div>
       </div>
     </section>
@@ -279,7 +280,7 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <img src="img/map.jpg" alt="Карта" width="300" height="160"/>
+        <a class="img" href="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387579,30.3221499,18z/data=!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833"><img src="img/map.jpg" alt="Карта" width="300" height="160"/></a>
         <a class="btn map-place" href="#">Заблудились? Напишите нам!</a>
       </section>
     </section>
@@ -342,7 +343,64 @@
           </section>
           </div>
         </section>
-      </div>
     </footer>
+    <div class="modal-content">
+      <div class="form">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="half-width">
+          <label for="your-name">Ваше имя:</label>
+          <input class="your-name" type="text" name="your-name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="half-width">
+          <label for="mail">Ваш e-mail:</label>
+          <input class="mail" type="email"  name="mail" placeholder="Для отправки ответа">
+          </div>
+          <label for="review">Текст письма:</label>
+                <textarea id="review" name="review" rows="5">В свободной форме</textarea>
+        </div>
+          <button class="btn" type="submit">Отправить</button>
+    </div>
+    <script type="text/javascript">
+      var link = document.querySelector(".map-place");
+      var popup = document.querySelector(".modal-content");
+      var close = popup.querySelector(".modal-content-close");
+      var form = popup.querySelector("form");
+      var your-name = popup.querySelector("[name=your-name]");
+      var mail = popup.querySelector("[name=mail]");
+      var storage = localStorage.getItem("your-name");
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+        if (storage) {
+          your-name.value = storage;
+        } else {
+          your-name.focus();
+        }
+      });
+      close.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.remove("modal-content-show");
+      popup.classList.remove("modal-error");
+      });
+      form.addEventListener("submit", function(event) {
+        if (!your-name.value || !mail.value) {
+        event.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+        } else {
+          localStorage.setItem("your-name", your-name.value);
+        }
+      });
+      window.addEventListener("keydown", function(event) {
+       if (event.keyCode === 27) {
+         if (popup.classList.contains("modal-content-show")) {
+           popup.classList.remove("modal-content-show");
+           popup.classList.remove("modal-error");
+         }
+       }
+     });
+    </script>
   </body>
 </html>

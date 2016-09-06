@@ -156,6 +156,8 @@ body {
 }
 .user-block-1 .item-logo {
   padding: 12px 0px;
+  margin: 0;
+
 }
 
 .item-logo a {
@@ -168,6 +170,7 @@ body {
   background: #ee3643;
   box-shadow: 0 5px 0 0 #b52933;
   padding: 10px 55px;
+  margin: 0;
 }
 .item-logo a:hover {
   font-family: "Cuprum";
@@ -260,10 +263,10 @@ body {
   width: 200px;
   float: left;
   font-style: italic;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 23px;
   color: #ee3643;
-  padding: 50px;
+  padding: 35px 50px;
 }
 .user-block-2 .call {
   float: left;
@@ -275,8 +278,9 @@ body {
   font-size: 21px;
   line-height: 18px;
   color: #ee3643;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   width: 300px;
+  font-weight: bold;
 }
 .user-block-2 .icon-phone {
   padding: 0 15px;
@@ -285,6 +289,9 @@ body {
 
   padding-right: 45px;
   padding-left: 20px;
+}
+.phone p {
+  margin: 10px 0;
 }
 .user-block-2 .address {
   font-family: "Cuprum";
@@ -1026,9 +1033,9 @@ body {
   margin-top: 20px;
 }
 .catalog-item .product-item {
-  margin-right: 20px;
+  margin-right: 27px;
 }
-.catalog-item:nth-child(3n+3) {
+.catalog-item .product-item:nth-child(3n+3) {
   margin-right: 0;
 }
 .paginator a {
@@ -1108,9 +1115,277 @@ body {
 .filters .btn {
   background: #ffffff;
   text-transform: uppercase;
-  border: 1 px solid #c1c1c1;
+  border: 1px solid #c1c1c1;
   border-radius: 3px;
   padding: 15px 40px;
   font-size: 13px;
   font-family: "PTSans";
+}
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-content {
+  display: none;
+  width: 460px;
+  top: 2520px;
+  left: 50%;
+  margin-left: -320px;
+  padding: 50px 80px 40px 80px;
+  color: #000000;
+  background: #ffffff;
+  position: absolute;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+
+}
+.modal-content-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-content::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 620px;
+  height: 8px;
+  background-color: #ee3643;
+}
+.modal-content-2::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 620px;
+  height: 8px;
+  background-color: #ee3643;
+}
+.modal-content-close {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  width: 20px;
+  height: 3px;
+  background-color: #ee3643;
+  border-radius: 1px;
+}
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+.modal-content label {
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+.login-form input[type="text"],
+ input[type="email"] {
+  font-family: "PTSans", "Arial", sans-serif;
+  width: 203px;
+  height: 35px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #999999;
+  padding-left: 15px;
+
+}
+.login-form input {
+  border: 1px solid #d7dcde;
+  border-radius: 1px;
+  vertical-align: middle;
+}
+.login-form .half-width {
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.login-form .half-width:first-child {
+  margin-right: 16px;
+}
+.login-form textarea {
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #999999;
+  width: 460px;
+  border: 1px solid #d7dcde;
+  border-radius: 1px;
+  vertical-align: middle;
+  margin-bottom: 75px;
+}
+
+.modal-content .btn {
+  font-family: "Cuprum", "PTSans", "Arial", sans-serif;
+  font-size: 14px;
+  padding: 10px 200px;
+  background: #ee3643;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow:
+  -40px 0 0 40px #f1f1f1,
+  38px 0 0 40px #f1f1f1 ;
+  border: 0;
+}
+.modal-content .btn:hover {
+  font-family: "Cuprum", "PTSans", "Arial", sans-serif;
+  font-size: 14px;
+  padding: 10px 200px;
+  background: #ca2c37;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow:
+  -40px 0 0 40px #f1f1f1,
+  38px 0 0 40px #f1f1f1 ;
+  border: 0;
+}
+.modal-content .btn:active {
+  font-family: "Cuprum", "PTSans", "Arial", sans-serif;
+  font-size: 14px;
+  padding: 10px 200px;
+  background: #ba2732;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow:
+  -40px 0 0 40px #f1f1f1,
+  38px 0 0 40px #f1f1f1 ;
+  border: 0;
+}
+.modal-content-2 {
+  width: 460px;
+  top: 420px;
+  left: 50%;
+  margin-left: -300px;
+  color: #000000;
+  background: #ffffff;
+  padding: 50px 80px 40px 80px;
+  position: absolute;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
+  display: none;
+
+}
+.modal-content-2 .text {
+  height: 170px;
+}
+.modal-content-2 .circle {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #63a63e;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.modal-content-2 .circle::before {
+  content: "";
+  position: absolute;
+  top: 79px;
+  left: 99px;
+  width: 32px;
+  height: 6px;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+}
+.modal-content-2 .circle::after {
+  content: "";
+  position: absolute;
+  top: 84px;
+  left: 94px;
+  width: 16px;
+  height: 6px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+.modal-content-2 p {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 18px;
+  margin-left: 40px;
+  margin-bottom: 125px;
+}
+.modal-content-2 a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #ee3643;
+  padding: 10px 60px;
+  margin-right: 17px;
+  box-shadow: -40px 0 0 40px #f1f1f1, 180px 0 0 40px #f1f1f1;
+}
+.modal-content-2 a:hover {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #ca2c37;
+  padding: 10px 60px;
+  margin-right: 17px;
+  box-shadow: -40px 0 0 40px #f1f1f1, 180px 0 0 40px #f1f1f1;
+}
+.modal-content-2 a:active {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #ba2732;
+  padding: 10px 60px;
+  margin-right: 17px;
+  box-shadow: -40px 0 0 40px #f1f1f1, 180px 0 0 40px #f1f1f1;
+}
+.modal-content-2 .btn {
+  font-family: "Cuprum", "PTSans", "Arial", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000000;
+  background: #ffffff;
+  padding: 10px 45px;
+  border: 0;
+  font-weight: bold;
+  box-shadow: 42px 0 0 40px #f1f1f1;
 }

@@ -545,7 +545,7 @@ body {
   margin: 0px auto;
 }
 .catalog-product .product-item {
-  font-family: 'PT Sans';
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
   width: 220px;
   position: relative;
@@ -678,6 +678,7 @@ body {
   color: #999999;
 }
 .product-item .price {
+  font-family: "PT Sans", "Arial", sans-serif;
   position: relative;
   width: 80px;
   margin: 0 auto 20px;
@@ -818,9 +819,9 @@ body {
   display: block;
 }
 
-#imagetape11:checked ~ .slider-number-list label[for="btn-1"],
-#imagetape1:checked ~ .slider-number-list label[for="btn-2"],
-#imagetape1:checked ~ .slider-number-list label[for="btn-3"] {
+#imagetape1:checked ~ .slider-number-list label[for="imagetape1"],
+#imagetape2:checked ~ .slider-number-list label[for="imagetape2"],
+#imagetape3:checked ~ .slider-number-list label[for="imagetape3"] {
   background: #ffffff;
   color: #32425c;
 }
@@ -904,7 +905,7 @@ body {
   width: 140px;
   padding: 15px 40px;
 }
-.contacts a {
+.contacts .map-place {
   width: 180px;
   padding: 15px 61px;
 }

@@ -352,7 +352,7 @@ body {
   height: 60px;
   background: #32425c;
   box-shadow: 0 5px 0 0 #293449;
-  margin: 10px 10px;
+  margin: 10px 0;
 }
 .main-navigation ul {
   margin: 0;
@@ -686,6 +686,7 @@ body {
   color: #ffffff;
   border-radius: 3px;
   background: #ee3643;
+  overflow: hidden;
 }
 .product-item .price:after {
   position: absolute;
@@ -1036,6 +1037,7 @@ body {
   padding-left: 160px;
 }
 .social-btn {
+  position: relative;
   display: inline-block;
   width: 43px;
   height: 43px;
@@ -1046,6 +1048,13 @@ body {
   border-radius: 50px;
   text-align: center;
   background: #212a3a;
+}
+.socials
+.socials [class^="icon-"]::before,
+.socials [class*=" icon-"]::before {
+  position: absolute;
+  top: 12px;
+  left: 11px;
 }
 .link {
   float: right;
@@ -1150,7 +1159,9 @@ body {
 .personal-link a:first-child {
     margin-left: 20px;
 }
-
+.breadcrumbs ul {
+  padding: 0;
+}
 .breadcrumbs li {
   display: inline-block;
 }

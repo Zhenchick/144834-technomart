@@ -583,6 +583,9 @@ body {
 .product-item:hover .product-item-controls {
   display: block;
 }
+.product-item:hover {
+  box-shadow: 0 5px 15px 3px #b1b5bd;
+}
 .product-item-controls .buy,
 .product-item-controls .bookmark {
   font-family: 'Cuprum', 'Arial', sans-serif;
@@ -1049,6 +1052,19 @@ body {
   text-align: center;
   background: #212a3a;
 }
+.social-btn:hover {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin: 0px 2px;
+  vertical-align: top;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  background: #ee3643;
+}
 .socials
 .socials [class^="icon-"]::before,
 .socials [class*=" icon-"]::before {
@@ -1184,10 +1200,12 @@ body {
   margin-bottom: 0;
 }
 .filters h2 {
+  font-family: "PT Sans";
+  font-weight: 600;
   text-transform: uppercase;
   background: #f7f3ec;
   font-size: 13px;
-  padding: 15px 0 15px 20px;
+  padding: 11px 0 11px 20px;
   margin-top: 20px;
 }
 .filter legend {
@@ -1206,6 +1224,8 @@ body {
  text-transform: uppercase;
 }
 .headline-catalog h2 {
+  font-family: "PT Sans";
+  font-weight: 600;
   display: inline-block;
   font-size: 13px;
   margin-left: 20px;
@@ -1222,7 +1242,7 @@ body {
   border-bottom: 1px dashed #ee3643;
 }
 .headline-catalog .functional {
-  margin-right: 45px;
+  margin-right: 65px;
 }
 .headline-catalog .price:hover, .type:hover, .functional:hover {
   margin-left: 70px;
@@ -1235,10 +1255,10 @@ body {
   color: #ee3643;
 }
 .headline-catalog .ascending {
-  font-size: 20px;
+  font-size: 22px;
 }
 .headline-catalog .descending {
-  font-size: 20px;
+  font-size: 22px;
 }
 .headline-catalog .ascending:hover, .descending:hover {
   color: #000000;
@@ -1251,8 +1271,11 @@ body {
   margin-left: 240px;
   margin-top: 20px;
 }
+.catalog-item .price {
+  padding: 9px 30px;
+}
 .catalog-item .product-item {
-  margin-right: 27px;
+  margin-right: 26px;
   font-family: 'PT Sans';
 }
 .catalog-item .product-item:nth-child(3n+3) {
@@ -1497,7 +1520,7 @@ body {
   color: #ffffff;
 }
 .slide-content {
-  font-family: "PT Sans";
+  font-family: "Cuprum";
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
@@ -1759,6 +1782,7 @@ body {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
+
 }
 .modal-content-2 .circle::before {
   content: "";

@@ -1624,10 +1624,6 @@ body {
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
 
 }
-.modal-content-show {
-  display: block;
-  animation: bounce 0.6s;
-}
 
 .modal-error {
   animation: shake 0.6s;
@@ -1687,6 +1683,13 @@ body {
   line-height: 18px;
   margin-bottom: 15px;
 }
+
+.modal-content-show,
+.modal-content-2.modal-content-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
 .login-form input[type="text"],
  input[type="email"] {
   font-family: "PTSans", "Arial", sans-serif;
